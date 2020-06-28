@@ -1,0 +1,58 @@
+<footer>
+	<nav>
+		<ul>
+
+			<li>
+				<a href="{{ path('homepage') }}">
+					<img src="{{ asset('assets/img/logo.png') }}" class="logo" alt="logo association"/></a>
+			</li>
+			<li><a href="{{ path('mention') }}"/>
+			</li>
+			<li>
+				<p>
+					Horaire d'ouverture:</p>
+			</li>
+		</ul>
+	</nav>
+
+	<nav>
+		<ul>
+			<li>
+				Coordonnée
+			</li>
+			<li>
+				Adresse
+			</li>
+			<li>
+				Code postal
+			</li>
+			<li>
+				Ville
+			</li>
+			<li>
+				Téléphone
+			</li>
+			<li>
+				Mail
+			</li>
+		</ul>
+	</nav>
+	<nav>
+		<p>Suivez-nous</p>
+		<a href="">
+			<img src="{{ asset('assets/img/logofac.png') }}" class="logo" alt="logo facebook"/></a>
+		<a href="">
+			<img src="{{ asset('assets/img/logoinsta.png') }}" class="logo" alt="logo instagram"/></a>
+		<a href="">
+			<img src="{{ asset('assets/img/logolinc.png') }}" class="logo" alt="logo linkeding"/></a>
+	</nav>
+	<hr/>
+	<p class="copyrights">
+		&copy;{{'now'| date('Y')}}
+		<a href="{{ path('homepage') }}"/>
+		Touts droits réservées.
+		<a href="">
+			Back office
+		</a>
+	</p>
+</footer>

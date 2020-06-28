@@ -1,0 +1,42 @@
+html{
+    font-size: 16px;
+}
+
+.title{
+    font-size: 20px;
+}
+body{
+    background-color: #FFC97A;
+}
+body > header {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 20% 60% 20%;
+    padding: 1rem;
+    background-color: #FFC97A;
+}
+
+body > header .logo{
+    flex: 1;
+    height: 5rem;
+}
+body > header h1{
+    flex:1;
+    text-align: center;
+}
+body > header > nav {
+    flex:1;
+}
+body > header > nav ul{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    list-style: none;
+}
+
+body > header > nav ul li a{
+    padding: 0.5rem 1rem;
+}
+body > section{
+    padding:1rem;
+}
