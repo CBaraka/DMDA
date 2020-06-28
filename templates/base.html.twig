@@ -6,7 +6,8 @@
 			{% block title %}Association DMDA
 			{% endblock %}
 		</title>
-		<link rel="stylesheets" href="{{ asset('assets/css/style.css')}}"/> 
+		<link rel="stylesheet" href="{{ asset('assets/css/style.css') }}" />
+        {% block stylesheets %}{% endblock %} 
 		</head>
 		<body>
 			{% include "_header.html.twig" %}

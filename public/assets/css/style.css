@@ -4,9 +4,7 @@ html{
 
 .title{
     font-size: 20px;
-}
-body{
-    background-color: #FFC97A;
+
 }
 body > header {
     display: grid;
@@ -39,4 +37,30 @@ body > header > nav ul li a{
 }
 body > section{
     padding:1rem;
+}
+body > footer{
+    background-color: #4A5899;
+    text-decoration-color: #ffffff;
+    padding:1rem;
+    max-height: 30rem;
+    color:#ffffff;
+}
+body > footer .copyrights {
+    font-size: 0.8rem;
+    text-align: center;
+}
+body > footer .logo{
+    flex: 1;
+    height: 5rem;
+}
+body > footer > nav ul{
+    list-style: none;
+    
+}
+body > footer > nav a{
+    padding: 0.5rem 1rem;
+    color:#ffffff;
+}
+body > footer > .copyrights a{
+    color:#ffffff;
 }
