@@ -1,9 +1,15 @@
+@import "~bootstrap/scss/bootstrap";
+
 html{
     font-size: 16px;
 }
 
 .title{
     font-size: 20px;
+}
+body {
+    padding:0;
+    margin:0;
 
 }
 body > header {
@@ -41,8 +47,7 @@ body > section{
 body > footer{
     background-color: #4A5899;
     text-decoration-color: #ffffff;
-    padding:1rem;
-    max-height: 30rem;
+    max-height: 10 px;
     color:#ffffff;
 }
 body > footer .copyrights {
@@ -52,15 +57,19 @@ body > footer .copyrights {
 body > footer .logo{
     flex: 1;
     height: 5rem;
+    color:#ffffff;
+
 }
-body > footer > nav ul{
-    list-style: none;
-    
-}
-body > footer > nav a{
+
+body > footer .col a{
     padding: 0.5rem 1rem;
     color:#ffffff;
+    align-items: flex-start;
 }
 body > footer > .copyrights a{
     color:#ffffff;
+    align-items: flex-start;
+}
+ hr{
+background-color:#FFC97A;
 }

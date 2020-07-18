@@ -1,52 +1,61 @@
 <footer>
-	<nav>
-		<ul>
+	<div class="container">
+		<div class="row">
+			<div class="col">
 
-			<li>
-				<a href="{{ path('homepage') }}">
-					<img src="{{ asset('assets/img/logofooter.png') }}" class="logo" alt="logo association"/></a>
-			</li>
-			<li><a href="{{ path('mention') }}">Mentions Légales</a>
-			<li><a href="">Contactez-nous</a>
-			</li>
-			<li>
 				<p>
-					Horaire d'ouverture:</p>
-			</li>
-		</ul>
-	</nav>
+					<a href="{{ path('homepage') }}">
+						<img src="{{ asset('assets/img/logofooter.png') }}" class="logo" alt="logo association"/></a>
+				</p>
+				<p>
+					<a href="{{ path('mention') }}">Mentions Légales</a>
+				</p>
+				<p>
+					<a href="">Contactez-nous</a>
+				</p>
+				<p>
+					Horaire d'ouverture:
+				</p>
 
-	<nav>
-		<ul>
-			<li>
-				Coordonnée
-			</li>
-			<li>
-				Adresse
-			</li>
-			<li>
-				Code postal
-			</li>
-			<li>
-				Ville
-			</li>
-			<li>
-				Téléphone
-			</li>
-			<li>
-				Mail
-			</li>
-		</ul>
-	</nav>
-	<nav>
-		<p>Suivez-nous</p>
-		<a href="">
-			<img src="{{ asset('assets/img/logofac.png') }}" class="logo" alt="logo facebook"/></a>
-		<a href="">
-			<img src="{{ asset('assets/img/logoinsta.png') }}" class="logo" alt="logo instagram"/></a>
-		<a href="">
-			<img src="{{ asset('assets/img/logolinc.png') }}" class="logo" alt="logo linkeding"/></a>
-	</nav>
+			</div>
+
+			<div class="col">
+				<p>
+					Coordonnée
+				</p>
+				<p>
+					Adresse
+				</p>
+				<p>
+					Code postal
+				</p>
+				<p>
+					Ville
+				</p>
+				<p>
+					Téléphone
+				</p>
+				<p>
+					Mail
+				</p>
+			</div>
+			<div class="col">
+				<p>Suivez-nous</p>
+				<p>
+					<a href="">
+						<img src="{{ asset('assets/img/logofac.png') }}" class="logo" alt="logo facebook"/></a>
+				</p>
+				<p>
+					<a href="">
+						<img src="{{ asset('assets/img/logoinsta.png') }}" class="logo" alt="logo instagram"/></a>
+				</p>
+				<p>
+					<a href="">
+						<img src="{{ asset('assets/img/logolinc.png') }}" class="logo" alt="logo linkeding"/></a>
+				</p>
+			</div>
+		</div>
+	</div>
 	<hr/>
 	<p class="copyrights">
 		&copy;{{'now'| date('Y')}}
