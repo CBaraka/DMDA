@@ -17,6 +17,15 @@ class DefaultController extends AbstractController
             'pagetitle' => "Association DMDA Mayotte",
         ]);
     }
+/**
+     * @Route("/adhesion", name="adhesion")
+     */
+    public function adhesion()
+    {
+        return $this->render('adhesion/index.html.twig', [
+            'pagetitle' => "Adhésion",
+        ]);
+    }
 
   
     /**
