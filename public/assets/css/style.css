@@ -49,6 +49,9 @@ body > footer{
     text-decoration-color: #ffffff;
     max-height: 10 px;
     color:#ffffff;
+    margin-bottom: 0;
+    position: absolute;
+    width:100%;
 }
 body > footer .copyrights {
     font-size: 0.8rem;
