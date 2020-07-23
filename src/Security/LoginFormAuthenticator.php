@@ -100,7 +100,7 @@ class LoginFormAuthenticator extends AbstractFormLoginAuthenticator implements P
         // throw new \Exception('TODO: provide a valid redirect inside '.__FILE__);
 
         // redirection tableau de board admin
-        return new RedirectResponse($this->urlGenerator->generate('admin'));
+        return new RedirectResponse($this->urlGenerator->generate('/admin'));
     }
 
     protected function getLoginUrl()

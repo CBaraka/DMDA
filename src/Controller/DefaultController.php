@@ -44,7 +44,7 @@ class DefaultController extends AbstractController
     //connexion au Back-office
 
     /**
-     * @Route("/login", name="app_login")
+     * @Route("/connexion", name="app_login")
      */
     public function login(AuthenticationUtils $authenticationUtils): Response
     {
@@ -74,7 +74,7 @@ class DefaultController extends AbstractController
     //Déconnexion du Back-office
 
     /**
-     * @Route("/logout", name="app_logout")
+     * @Route("/deconnexion", name="app_logout")
      */
     public function logout()
     {
@@ -94,7 +94,7 @@ class DefaultController extends AbstractController
 
     public function adminDashboard()
     {
-       $this->denyAccessUnlessGranted('IS_AUTHENTICATED_FULLY');
+       //$this->denyAccessUnlessGranted('IS_AUTHENTICATED_FULLY');
         $this->denyAccessUnlessGranted('ROLE_ADMIN');
 
         // or add an optional message - seen by developers
