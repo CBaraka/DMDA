@@ -94,13 +94,13 @@ class DefaultController extends AbstractController
 
     public function adminDashboard()
     {
-       //$this->denyAccessUnlessGranted('IS_AUTHENTICATED_FULLY');
+        $this->denyAccessUnlessGranted('IS_AUTHENTICATED_FULLY');
         $this->denyAccessUnlessGranted('ROLE_ADMIN');
 
         // or add an optional message - seen by developers
-       // $this->denyAccessUnlessGranted('ROLE_ADMIN', null, 'User tried to access a page without having ROLE_ADMIN');
+        // $this->denyAccessUnlessGranted('ROLE_ADMIN', null, 'User tried to access a page without having ROLE_ADMIN');
 
         //vous pouvez également rendre un modèle pour afficher un tableau de bord approprié
-       return $this->render('dashboard/dashboard.html.twig');
+        return $this->render('dashboard/dashboard.html.twig');
     }
 }
