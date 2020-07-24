@@ -58,6 +58,7 @@ class DefaultController extends AbstractController
         $lastUsername = $authenticationUtils->getLastUsername();
 
         return $this->render('security/login.html.twig', [
+            'pagetitle' =>"connexion",
             'last_username' => $lastUsername,
             'error' => $error
         ]);
@@ -88,7 +89,7 @@ class DefaultController extends AbstractController
      *
      * @IsGranted("ROLE_ADMIN")
      * 
-     * @Route("/admin", name="admin")
+     * @Route("/dashboard", name="dashboard")
      */
 
 
@@ -101,7 +102,7 @@ class DefaultController extends AbstractController
         // $this->denyAccessUnlessGranted('ROLE_ADMIN', null, 'User tried to access a page without having ROLE_ADMIN');
 
         //vous pouvez également rendre un modèle pour afficher un tableau de bord approprié
-        return $this->render('dashboard/dashboard.html.twig' , [
+        return $this->render('admin/dashboard.html.twig' , [
             'pagetitle' =>"Tableau de board",
         ]);
     }
