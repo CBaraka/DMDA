@@ -101,6 +101,8 @@ class DefaultController extends AbstractController
         // $this->denyAccessUnlessGranted('ROLE_ADMIN', null, 'User tried to access a page without having ROLE_ADMIN');
 
         //vous pouvez également rendre un modèle pour afficher un tableau de bord approprié
-        return $this->render('dashboard/dashboard.html.twig');
+        return $this->render('dashboard/dashboard.html.twig' , [
+            'pagetitle' =>"Tableau de board",
+        ]);
     }
 }
