@@ -48,11 +48,7 @@ body > footer{
     color:#ffffff;
     margin-bottom: 0;
     position: absolute;
-<<<<<<< HEAD
     width:100%;
-=======
-    width: 100%;
->>>>>>> dev
 }
 body > footer .copyrights {
     font-size: 0.8rem;
