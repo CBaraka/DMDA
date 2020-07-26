@@ -73,3 +73,7 @@ body > footer > .copyrights a{
  hr{
 background-color:#FFC97A;
 }
+#mapid{
+    height: 50vh;
+    width: 50vh;
+}
