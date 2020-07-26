@@ -4,7 +4,6 @@ namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 
@@ -60,29 +59,5 @@ class AdminController extends AbstractController
     public function logout()
     {
         throw new \LogicException('This method can be blank - it will be intercepted by the logout key on your firewall.');
-    }
-    //administration
-
-    /**
-     * Require ROLE_ADMIN for *every* controller method in this class.
-     *
-     * @IsGranted("ROLE_ADMIN")
-     * 
-     * @Route("/dashboard", name="dashboard")
-     */
-
-
-    public function adminDashboard()
-    {
-        $this->denyAccessUnlessGranted('IS_AUTHENTICATED_FULLY');
-        $this->denyAccessUnlessGranted('ROLE_ADMIN');
-
-        // or add an optional message - seen by developers
-        // $this->denyAccessUnlessGranted('ROLE_ADMIN', null, 'User tried to access a page without having ROLE_ADMIN');
-
-        //vous pouvez également rendre un modèle pour afficher un tableau de bord approprié
-        return $this->render('admin/dashboard.html.twig', [
-            'pagetitle' => "Tableau de board",
-        ]);
     }
 }

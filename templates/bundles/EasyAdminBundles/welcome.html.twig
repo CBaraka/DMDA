@@ -1,7 +1,16 @@
 {# @var ea \EasyCorp\Bundle\EasyAdminBundle\Context\AdminContext #}
 {% extends '@EasyAdmin/page/content.html.twig' %}
+{% block head %}
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+	{% block page_title "Bienvenue dans la gestion du site de l'Association DMDA Mayotte" %}
+	</title>
+	<link rel="stylesheet" href="{{ asset('assets/css/style.css') }}"/>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	{% block stylesheets %}{% endblock %}
+{% endblock %}
 
-{% block page_title "Bienvenue dans la gestion du site de l'Association DMDA Mayotte" %}
 
 {% block page_content %}
 	<div class="container">
@@ -9,15 +18,35 @@
 			<div class="col-6">
 				<p class="h4">Description de l'Association</p>
 				<div class="list-group">
-				{% for DescAsso in descAsso %}
-					<li class="list-group-item d-flex justify-content-between align-items-center">
-							{{DescAsso.titre}}
-							{{DescAsso.contenu}}
-							{{DescAsso.image}}
-						<span class="badge badge-primary badge-pill"></span>
-					</li>
-				{% endfor %}
-					
+					{% for DescAsso in descAsso %}
+						<table class="tableau-style">
+							<thead>
+								<tr>
+									<th>Titre</th>
+									<th>Contenu</th>
+									<th>Image</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>{{DescAsso.titre}}</td>
+									<td>{{DescAsso.contenu}}</td>
+									<td>{{DescAsso.image}}</td>
+								</tr>
+								<tr>
+									<td>{{DescAsso.titre}}</td>
+									<td>{{DescAsso.contenu}}</td>
+									<td>{{DescAsso.image}}</td>
+								</tr>
+								<tr>
+									<td>{{DescAsso.titre}}</td>
+									<td>{{DescAsso.contenu}}</td>
+									<td>{{DescAsso.image}}</td>
+								</tr>
+							</tbody>
+						</table>
+					{% endfor %}
+
 				</div>
 			</div>
 
@@ -27,19 +56,25 @@
 			<div class="col-12">
 				<p class="h4">Listes des utilisateurs</p>
 				<div class="list-group">
-				{% for User in user %}
-					<li class="list-group-item d-flex justify-content-between align-items-center">
-							{{User.email}}
-						<span class="badge badge-primary badge-pill"></span>
-					</li>
-				{% endfor %}
-					
+					{% for User in user %}
+						<table class="tableau-style">
+							<thead>
+								<tr>
+									<th>Email</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>{{User.email}}</td>
+								</tr>
+							</tbody>
+						</table>
+					{% endfor %}
+
 				</div>
 			</div>
 		</div>
 
 	</div>
 
-	<pre>
-    </pre>
 {% endblock %}
