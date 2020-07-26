@@ -2,6 +2,8 @@
 
 namespace App\Controller\Admin;
 
+use App\Entity\DescAsso;
+use App\Entity\User;
 use App\Repository\UserRepository;
 use App\Repository\DescAssoRepository;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Dashboard;
@@ -48,6 +50,8 @@ class DashboardController extends AbstractDashboardController
     public function configureMenuItems(): iterable
     {
         yield MenuItem::linktoDashboard('Dashboard', 'fa fa-home');
+        yield MenuItem::linkToCrud('Description','fa fa-pencil-square-o',DescAsso::class);
+        yield MenuItem::linkToCrud('Utilisateurs','fa fa-users',User::class);
         // yield MenuItem::linkToCrud('The Label', 'icon class', EntityClass::class);
     }
 }
