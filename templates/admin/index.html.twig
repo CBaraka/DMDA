@@ -23,7 +23,9 @@
 						<div class="mb-3">
 							Vous êtes connecté en tant que
 							{{ app.user.username }},
-							<a href="{{ path('app_logout') }}">Deconnexion</a>
+							<button class="btn btn-lg btn-primary" type="submit">
+								<a href="{{ path('app_logout') }}">Deconnexion</a>
+							</button>
 						</div>
 					{% endif %}
 
