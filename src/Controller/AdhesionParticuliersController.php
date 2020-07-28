@@ -28,7 +28,7 @@ class AdhesionParticuliersController extends AbstractController
              $em->persist($adhesionParticulier);
              $em->flush();
 
-             return $this->redirectToRoute('homepage');
+            return $this->redirectToRoute('homepage');
          }
         return $this->render('adhesion_particuliers/index.html.twig', [
             'pagetitle' => 'AdhesionParticuliersController',

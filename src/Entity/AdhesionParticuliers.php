@@ -156,12 +156,12 @@ class AdhesionParticuliers
         return $this;
     }
 
-    public function getDateDeNaissance(): ?int
+    public function getDateDeNaissance()
     {
         return $this->date_de_naissance;
     }
 
-    public function setDateDeNaissance(int $date_de_naissance): self
+    public function setDateDeNaissance( $date_de_naissance): self
     {
         $this->date_de_naissance = $date_de_naissance;
 

@@ -73,14 +73,7 @@ body > footer > .copyrights a{
  hr{
 background-color:#FFC97A;
 }
-<<<<<<< HEAD
 #mapid{
     height: 50vh;
     width: 50vh;
 }
-=======
-label.required::after {
-    content: "*";
-    color:red;
-}
->>>>>>> adhesion/particuliers
