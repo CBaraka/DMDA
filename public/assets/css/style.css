@@ -73,6 +73,10 @@ body > footer > .copyrights a{
  hr{
 background-color:#FFC97A;
 }
+label.required:before {
+    content: "*";
+    color:red;
+}
 #mapid{
     height: 50vh;
     width: 50vh;
