@@ -80,4 +80,5 @@ label.required:before {
 #mapid{
     height: 50vh;
     width: 50vh;
+    margin-top: 10px;
 }
