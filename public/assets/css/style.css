@@ -80,6 +80,7 @@ label.required::after {
 #mapid{
     height: 50vh;
     width: 50vh;
+    margin-top: 10px;
 }
 body > footer .col p .logo{
     flex: 1;
