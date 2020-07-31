@@ -17,4 +17,14 @@ class DefaultController extends AbstractController
             'pagetitle' => "Association DMDA Mayotte",
         ]);
     }
+
+    /**
+     * @Route("mention", name="mention")
+     */
+    public function mention()
+    {
+        return $this->render('mentions_legales/index.html.twig', [
+            'pagetitle' => "Mentions Légales",
+        ]);
+    }
 }
