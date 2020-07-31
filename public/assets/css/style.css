@@ -73,7 +73,7 @@ body > footer > .copyrights a{
  hr{
 background-color:#FFC97A;
 }
-label.required:before {
+label.required::after {
     content: "*";
     color:red;
 }
