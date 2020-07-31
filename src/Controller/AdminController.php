@@ -42,15 +42,6 @@ class AdminController extends AbstractController
             'error' => $error
         ]);
     }
-
-    /**
-     * @Route("/category", name="category")
-     */
-    public static function getEntityFqcn(): string
-    {
-        return Category::class;
-    }
-
     //Déconnexion du Back-office
 
     /**
