@@ -81,3 +81,7 @@ label.required::after {
     height: 50vh;
     width: 50vh;
 }
+body > footer .col p .logo{
+    flex: 1;
+    height: 5rem;
+}
