@@ -26,7 +26,7 @@ class ContactController extends AbstractController
 
           $em->persist($contact);
           $em->flush();
-          return $this->redirectToRoute('contact');
+          return $this->redirectToRoute('homepage');
       }
         return $this->render('contact/index.html.twig', [
             'pagetitle' => 'ContactController',
