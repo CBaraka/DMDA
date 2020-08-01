@@ -1,13 +1,13 @@
-const mymap = L.map('mapid').setView([45.837469, 1.489231], 16);
+const mymap = L.map('mapid').setView([-12.702452, 45.123055], 16);
 
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         }).addTo(mymap);
 
-        L.marker([45.837469, 1.489231]).addTo(mymap)
-            .bindPopup("<h3>L'escalier</h3><address>3, Place Gay Lussac<br/>87400 Saint-Léonard-de-Noblat</address>");
+        L.marker([-12.702452, 45.123055]).addTo(mymap)
+            .bindPopup("<h3>Bandraboua</h3><address>3, villages de  Bandrabou<br/>97650 Bandraboua</address>");
 
-        let circle = L.circle([45.837469, 1.489231], {
+        let circle = L.circle([-12.702452, 45.123055], {
             color: 'e58714',
             fillColor: '#f03',
             fillOpacity: 0.5,
