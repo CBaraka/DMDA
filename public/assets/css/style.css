@@ -48,7 +48,7 @@ body > footer{
     color:#ffffff;
     margin-bottom: 0;
     position: absolute;
-    width: 100%;
+    width:100%;
 }
 body > footer .copyrights {
     font-size: 0.8rem;
@@ -73,11 +73,16 @@ body > footer > .copyrights a{
  hr{
 background-color:#FFC97A;
 }
-label.required:before {
+label.required::after {
     content: "*";
     color:red;
 }
 #mapid{
     height: 50vh;
     width: 50vh;
+    margin-top: 10px;
+}
+body > footer .col p .logo{
+    flex: 1;
+    height: 5rem;
 }
