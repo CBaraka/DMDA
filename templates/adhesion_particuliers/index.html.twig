@@ -1,0 +1,185 @@
+{% extends "base.html.twig" %}
+{% block title %}
+{{pagetitle}}
+{% endblock %}
+{% block body %}
+<h3>Formulaire d'adhésion particuliers</h3>
+
+<div class="container">
+<div class="row">
+<div class="col-sm-9">
+{{ form_start(form) }}
+
+{# Les erreurs générales du formulaire. #}
+{{ form_errors(form) }}
+
+{# Génération manuelle et éclatée : #}
+<div
+class="form-group">
+{# Génération du label. #}
+{{ form_label(form.Situation, "Situation", {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
+
+{# Affichage des erreurs pour ce champ précis. #}
+{{ form_errors(form.Situation) }}
+
+<div
+class="col-sm-10">
+{# Génération de l'input. #}
+{{ form_widget(form.Situation, {'attr': {'class': 'form-control'}}) }}
+</div>
+</div>
+
+{# Génération manuelle et éclatée : #}
+<div
+class="form-group">
+{# Génération du label. #}
+{{ form_label(form.Nom, "Nom", {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
+
+{# Affichage des erreurs pour ce champ précis. #}
+{{ form_errors(form.Nom) }}
+
+<div
+class="col-sm-10">
+{# Génération de l'input. #}
+{{ form_widget(form.Nom, {'attr': {'class': 'form-control'}}) }}
+</div>
+</div>
+
+{# Génération manuelle et éclatée : #}
+<div
+class="form-group">
+{# Génération du label. #}
+{{ form_label(form.Prenom, "Prenom", {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
+
+{# Affichage des erreurs pour ce champ précis. #}
+{{ form_errors(form.Prenom) }}
+
+<div
+class="col-sm-10">
+{# Génération de l'input. #}
+{{ form_widget(form.Prenom, {'attr': {'class': 'form-control'}}) }}
+</div>
+</div>
+
+{# Génération manuelle et éclatée : #}
+<div
+class="form-group">
+{# Génération du label. #}
+{{ form_label(form.Adresse, "Adresse", {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
+
+{# Affichage des erreurs pour ce champ précis. #}
+{{ form_errors(form.Adresse) }}
+
+<div
+class="col-sm-10">
+{# Génération de l'input. #}
+{{ form_widget(form.Adresse, {'attr': {'class': 'form-control'}}) }}
+</div>
+</div>
+
+{# Génération manuelle et éclatée : #}
+<div
+class="form-group">
+{# Génération du label. #}
+{{ form_label(form.Code_postale, "Code postale", {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
+
+{# Affichage des erreurs pour ce champ précis. #}
+{{ form_errors(form.Code_postale) }}
+
+<div
+class="col-sm-10">
+{# Génération de l'input. #}
+{{ form_widget(form.Code_postale, {'attr': {'class': 'form-control'}}) }}
+</div>
+</div>
+
+{# Génération manuelle et éclatée : #}
+<div
+class="form-group">
+{# Génération du label. #}
+{{ form_label(form.Ville, "Ville", {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
+
+{# Affichage des erreurs pour ce champ précis. #}
+{{ form_errors(form.Ville) }}
+
+<div
+class="col-sm-10">
+{# Génération de l'input. #}
+{{ form_widget(form.Ville, {'attr': {'class': 'form-control'}}) }}
+</div>
+</div>
+
+{# Génération manuelle et éclatée : #}
+<div
+class="form-group">
+{# Génération du label. #}
+{{ form_label(form.Pays, "Pays", {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
+
+{# Affichage des erreurs pour ce champ précis. #}
+{{ form_errors(form.Pays) }}
+
+<div
+class="col-sm-10">
+{# Génération de l'input. #}
+{{ form_widget(form.Pays, {'attr': {'class': 'form-control'}}) }}
+</div>
+</div>
+
+{# Génération manuelle et éclatée : #}
+<div
+class="form-group">
+{# Génération du label. #}
+{{ form_label(form.Date_de_naissance, "Date de naissance", {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
+
+{# Affichage des erreurs pour ce champ précis. #}
+{{ form_errors(form.Date_de_naissance) }}
+
+<div
+class="col-sm-10">
+{# Génération de l'input. #}
+{{ form_widget(form.Date_de_naissance, {'label_attr': {'class': 'form-control'}}) }}
+</div>
+</div>
+
+{# Génération manuelle et éclatée : #}
+<div
+class="form-group">
+{# Génération du label. #}
+{{ form_label(form.Email, "Email", {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
+
+{# Affichage des erreurs pour ce champ précis. #}
+{{ form_errors(form.Email) }}
+
+<div
+class="col-sm-10">
+{# Génération de l'input. #}
+{{ form_widget(form.Email, {'attr': {'class': 'form-control'}}) }}
+</div>
+</div>
+
+{# Génération manuelle et éclatée : #}
+<div
+class="form-group">
+{# Génération du label. #}
+{{ form_label(form.Montant, "Montant", {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
+
+{# Affichage des erreurs pour ce champ précis. #}
+{{ form_errors(form.Montant) }}
+
+<div
+class="col-sm-10">
+{# Génération de l'input. #}
+{{ form_widget(form.Montant, {'attr': {'class': 'form-control'}}) }}
+</div>
+</div>
+<div class="form-group text-center">
+{{ form_widget(form.Valider, {'attr': {'class': 'btn btn-primary'}}) }}
+</div>
+{{ form_row(form._token)}}
+{{ form_end(form) }}
+</div>
+<div class="col-sm-3 "></div>
+</div>
+
+</div>
+{% endblock %}

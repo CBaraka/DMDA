@@ -3,7 +3,7 @@
 namespace App\Entity;
 
 use App\Repository\PostRepository;
-use App\Entity\Category;
+
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -28,11 +28,7 @@ class Post
      */
     private $content;
 
-    /**
-     * @ORM\ManyToOne(targetEntity="Category",inversedBy="post")
-     */
     
-    private $category;
 
     public function getId(): ?int
     {
@@ -63,15 +59,5 @@ class Post
         return $this;
     }
 
-    public function getCategory(): ?Category
-    {
-        return $this->category;
-    }
-
-    public function setCategory(?Category $category): self
-    {
-        $this->category = $category;
-
-        return $this;
-    }
+    
 }
