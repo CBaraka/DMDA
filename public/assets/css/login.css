@@ -1,0 +1,15 @@
+body > footer {
+  bottom: 0;
+}
+.login {
+  text-align: left;
+  margin: 5%;
+  padding-left: 30%;
+}
+label::after {
+  content: "*";
+  color: red;
+}
+.form-control{
+    width: 40%;
+}

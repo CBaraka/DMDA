@@ -8,7 +8,8 @@
 			{% endblock %}
 		</title>
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-		<link rel="stylesheet" href="{{ asset('assets/css/style.css') }}"/> {% block stylesheets %}{% endblock %}
+		<link rel="stylesheet" href="{{ asset('assets/css/style.css') }}"/>
+		<link rel="stylesheet" href="{{ asset('assets/css/login.css') }}"/> {% block stylesheets %}{% endblock %}
 		</head>
 		<body>
 			{% include "/admin/_header.html.twig" %}
@@ -28,19 +29,21 @@
 							</button>
 						</div>
 					{% endif %}
-
-					<h1 class="h3 mb-3 font-weight-normal">Connexion</h1>
-					<label for="inputEmail">Email</label>
-					<input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" required autofocus>
-					<label for="inputPassword">Password</label>
-					<input type="password" name="password" id="inputPassword" class="form-control" required>
-					<p>
-						<a href="{{ path('app_forgot_password_request')}}">Mot de passe oublié</a>
-					</p>
-					<input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
-					<button class="btn btn-lg btn-primary" type="submit">
-						Connexion
-					</button>
+					<div class="login">
+						<p >Connexion à la gestion du site DMDA Mayotte:</p>
+						<label for="inputEmail">Email</label>
+						<input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" required autofocus>
+						</br>
+						<label for="inputPassword">Password</label>
+						<input type="password" name="password" id="inputPassword" class="form-control" required>
+						<p>
+							<a href="{{ path('app_forgot_password_request')}}">Mot de passe oublié.</a>
+						</p>
+						<input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+						<button class="btn btn-lg btn-primary" type="submit">
+							Connexion
+						</button>
+					</div>
 				</form>
 			{% endblock %}
 
