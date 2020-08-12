@@ -6,7 +6,7 @@ use App\Entity\AdhesionParticuliers;
 use App\Entity\Contact;
 use App\Entity\DescAsso;
 use App\Entity\User;
-use App\Entity\Evenements;
+//use App\Entity\Evenements;
 use App\Repository\UserRepository;
 use App\Repository\DescAssoRepository;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Dashboard;
@@ -56,7 +56,7 @@ class DashboardController extends AbstractDashboardController
         yield MenuItem::linkToCrud('Description','fa fa-pencil-square-o',DescAsso::class);
         yield MenuItem::linkToCrud('Adhesion','fa fa-check-square-o',AdhesionParticuliers::class);
         yield MenuItem::linkToCrud('Contact','fa fa-check-square-o',Contact::class);
-        yield MenuItem::linkToCrud('Evenements','fa fa-check-square-o',Evenements::class);
+       // yield MenuItem::linkToCrud('Evenements','fa fa-check-square-o',Evenements::class);
         yield MenuItem::linkToCrud('Utilisateurs','fa fa-users',User::class);
         // yield MenuItem::linkToCrud('The Label', 'icon class', EntityClass::class);
     }
