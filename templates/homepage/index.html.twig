@@ -4,40 +4,36 @@
 {% endblock %}
 {% block body %}
 	<section>
-	<div class="container">
-	<div class="row">
-	<div class="col-sm-9">
-		<h2>Description de l'association</h2>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-9">
+					<h2>Description de l'association</h2>
 
-		{% for message in app.flashes('success') %}
-			<div class="alert alert-success" role="alert">{{  message}}</div>
-		{% endfor %}
-
-		<p>
-			Why do we use it?
-						It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-
-		</p>
-		<p>
-			Why do we use it?
-						It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-
-		</p>
-		<h2>Evénement récents et avenir</h2>
-		<p>
-			Why do we use it?
-						It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-
-		</p>
-		<p>
-			Why do we use it?
-						It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-
-		</p>
-		 </div>
-		  <div class="col-sm-3">
-		 
+					{% for message in app.flashes('success') %}
+						<div class="alert alert-success" role="alert">{{  message}}</div>
+					{% endfor %}
+					<div class="description">
+						{% for DescAsso in description %}
+							<div class="titre">{{DescAsso.titre}}</div>
+							<div class="contenu">{{DescAsso.contenu}}</div>
+							<div class="image">{{DescAsso.image}}</div>
+						{% endfor %}
+					</div>
+				</div>
+				<div class="col-sm-9">
+					<h2>Evenements</h2>
+					<div class"evenement">
+						<p>
+							matatabi
+							bonjour matatabi.It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout
+							img.jpg
+							tatata
+							sgsghshzkksodldld
+							hrl.jpg
+						</p>
+					</div>
+				</div>
+			</div>
 		</div>
-	</div>
 	</section>
 {% endblock %}
