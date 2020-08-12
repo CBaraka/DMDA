@@ -23,14 +23,13 @@
 				<div class="col-sm-9">
 					<h2>Evenements</h2>
 					<div class"evenement">
-						<p>
-							matatabi
-							bonjour matatabi.It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout
-							img.jpg
-							tatata
-							sgsghshzkksodldld
-							hrl.jpg
-						</p>
+						{% for Evenements in evenements %}
+							<div class="titre">{{Evenements.titre}}</div>
+							<div class="contenu">{{Evenements.contenu}}</div>
+							<div class="image">{{Evenements.image}}</div>
+							<div class="date">{{Evenements.date}}</div>
+							<div class="tel">{{Evenements.telephone}}</div>
+						{% endfor %}
 					</div>
 				</div>
 			</div>
