@@ -16,7 +16,9 @@
 						{% for DescAsso in description %}
 							<div class="titre">{{DescAsso.titre}}</div>
 							<div class="contenu">{{DescAsso.contenu}}</div>
-							<div class="image">{{DescAsso.image}}</div>
+							<div class="image">
+							<img class ="img" src="{{vich_uploader_asset(DescAsso,'imageFile')}}" style="width: 150px;">
+							</div>
 						{% endfor %}
 					</div>
 				</div>
