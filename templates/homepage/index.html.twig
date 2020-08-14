@@ -8,18 +8,76 @@
 			<div class="row">
 				<div class="col-sm-9">
 					<h2>Description de l'association</h2>
-
-					{% for message in app.flashes('success') %}
-						<div class="alert alert-success" role="alert">{{  message}}</div>
-					{% endfor %}
 					<div class="description">
 						{% for DescAsso in description %}
 							<div class="titre">{{DescAsso.titre}}</div>
 							<div class="contenu">{{DescAsso.contenu}}</div>
 							<div class="image">
-							<img class ="img" src="{{vich_uploader_asset(DescAsso,'imageFile')}}" style="width: 150px;">
+								<img class="img" src="{{vich_uploader_asset(DescAsso,'imageFile')}}" style="width: 150px;">
 							</div>
 						{% endfor %}
+					</div>
+					{% for message in app.flashes('success') %}
+						<div class="alert alert-success" role="alert">{{  message}}</div>
+					{% endfor %}
+
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-9">
+					<h2>Commentaires({{comment|length}})</h2>
+					<div class="comment">
+						{% for Commentaire in comment %}
+							<div class="pseudo">Publié par
+								{{Commentaire.pseudo}}
+								le
+								{{Commentaire.createdAt | date('d/m/Y - H:i')}}</div>
+							<div class="contenu">{{Commentaire.contenu}}</div>
+						{% else %}
+							<p>Il n'y a pas encore de commentaire, publiez le premier !</p>
+						{% endfor %}
+					</div>
+					<h2>Laissez un commentaire</h2>
+					{{ form_start(form) }}
+
+					{{ form_errors(form) }}
+
+					<div class="form-group">
+						{{ form_label(form.pseudo, "Pseudo", {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
+						{{ form_errors(form.pseudo) }}
+						<div class="col-sm-10">
+							{{ form_widget(form.pseudo, {'attr': {'class': 'form-control'}}) }}
+						</div>
+					</div>
+					<div class="form-group">
+						{{ form_label(form.email, "Email", {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
+						{{ form_errors(form.email) }}
+						<div class="col-sm-10">
+							{{ form_widget(form.email, {'attr': {'class': 'form-control'}}) }}
+						</div>
+					</div>
+
+					<div class="form-group">
+						{{ form_label(form.contenu, "commentaire", {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
+						{{ form_errors(form.contenu) }}
+						<div class="col-sm-10">
+							{{ form_widget(form.contenu, {'attr': {'class': 'form-control'}}) }}
+						</div>
+					</div>
+					<div class="form-group">
+
+						<div class="col-sm-10">
+							{{ form_label(form.rgpd) }}
+							{{ form_widget(form.rgpd) }}
+						</div>
+						{{ form_errors(form.rgpd) }}
+
+						<div class="form-group text-center">
+							{{ form_widget(form.Envoyer, {'attr': {'class': 'btn btn-primary'}}) }}
+						</div>
+						{{ form_row(form._token)}}
+						{{ form_end(form) }}
+
 					</div>
 				</div>
 			</div>
