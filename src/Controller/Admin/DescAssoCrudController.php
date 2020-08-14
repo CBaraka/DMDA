@@ -3,7 +3,14 @@
 namespace App\Controller\Admin;
 
 use App\Entity\DescAsso;
+//use EasyCorp\Bundle\EasyAdminBundle\Field\IdField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
+use EasyCorp\Bundle\EasyAdminBundle\Field\ImageField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\TextareaField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\TextEditorField;
+use Vich\UploaderBundle\Form\Type\VichFileType;
+use Vich\UploaderBundle\Form\Type\VichImageType;
 
 class DescAssoCrudController extends AbstractCrudController
 {
@@ -12,14 +19,15 @@ class DescAssoCrudController extends AbstractCrudController
         return DescAsso::class;
     }
 
-    /*
     public function configureFields(string $pageName): iterable
     {
         return [
-            IdField::new('id'),
-            TextField::new('title'),
-            TextEditorField::new('description'),
+            //IdField::new('id'),
+            TextField::new('titre'),
+            TextareaField::new('contenu'),
+            ImageField::new('imageFile')
+            ->setFormType(VichImageType::class)
+            ->setLabel('Image'),
         ];
     }
-    */
 }

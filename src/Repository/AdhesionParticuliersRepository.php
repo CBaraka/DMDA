@@ -18,33 +18,15 @@ class AdhesionParticuliersRepository extends ServiceEntityRepository
     {
         parent::__construct($registry, AdhesionParticuliers::class);
     }
-
-    // /**
-    //  * @return AdhesionParticuliers[] Returns an array of AdhesionParticuliers objects
-    //  */
-    /*
-    public function findByExampleField($value)
+    /**
+     * @return int|mixed|string|null
+     * @throws \Doctrine\ORM\NonUniqueResultException
+     */
+    public function countAlladhParticulier()
     {
-        return $this->createQueryBuilder('a')
-            ->andWhere('a.exampleField = :val')
-            ->setParameter('val', $value)
-            ->orderBy('a.id', 'ASC')
-            ->setMaxResults(10)
-            ->getQuery()
-            ->getResult()
-        ;
-    }
-    */
+        $queryBuilder = $this->createQueryBuilder('a');
+        $queryBuilder->select('COUNT(a.id) as value');
 
-    /*
-    public function findOneBySomeField($value): ?AdhesionParticuliers
-    {
-        return $this->createQueryBuilder('a')
-            ->andWhere('a.exampleField = :val')
-            ->setParameter('val', $value)
-            ->getQuery()
-            ->getOneOrNullResult()
-        ;
+        return $queryBuilder->getQuery()->getOneOrNullResult();
     }
-    */
 }
