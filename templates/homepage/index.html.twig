@@ -32,7 +32,7 @@
 								{{Commentaire.pseudo}}
 								le
 								{{Commentaire.createdAt | date('d/m/Y - H:i')}}</div>
-							<div class="contenu">{{Commentaire.contenu}}</div>
+							<div class="contenu">{{Commentaire.contenu | raw}}</div>
 						{% else %}
 							<p>Il n'y a pas encore de commentaire, publiez le premier !</p>
 						{% endfor %}
