@@ -11,6 +11,7 @@ use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use FOS\CKEditorBundle\Form\Type\CKEditorType;
 
 class CommentaireType extends AbstractType
 {
@@ -19,7 +20,7 @@ class CommentaireType extends AbstractType
         $builder
         ->add('pseudo', TextType::class)
         ->add('email', EmailType::class)
-        ->add('contenu',TextareaType::class)
+        ->add('contenu',CKEditorType::class)
         ->add('rgpd', CheckboxType::class, [
             'label' => 'J\'accepte que mes informations soient stockées dans la base de données de Mon Blog pour la gestion des commentaires. J\'ai bien noté qu\'en aucun cas ces données ne seront cédées à des tiers.'
         ])

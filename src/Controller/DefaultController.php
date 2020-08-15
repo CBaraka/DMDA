@@ -13,33 +13,15 @@ use Symfony\Component\HttpFoundation\Response;
 
 class DefaultController extends AbstractController
 {
-    /**
-     * @Route("/", name="homepage")
-     */
-    public function index()
-    {
-        return $this->render('homepage/index.html.twig', [
-            'pagetitle' => "Association DMDA Mayotte"
-        ]);
-    }
-    /**
-     * @Route("/", name="homepage")
-     */
-    public function description()
-    {
-        $description = $this->getDoctrine()->getRepository(DescAsso::class)->findAll();
-        return $this->render('homepage/index.html.twig', [
-            'description' => $description
-        ]);
-    }
 
     /** 
      * @Route("/", name="homepage") 
      *@param Request $request
      *@return Response
      */
-    public function commentaire(Request $request): Response
+    public function index(Request $request): Response
     {
+        $description = $this->getDoctrine()->getRepository(DescAsso::class)->findAll();
         $comment = $this->getDoctrine()->getRepository(Commentaire::class)->findAll();
         $commentaire = new Commentaire();
         $form = $this->createForm(CommentaireType::class, $commentaire);
@@ -55,6 +37,7 @@ class DefaultController extends AbstractController
         }
         return $this->render('homepage/index.html.twig', [
             'pagetitle' => "Association DMDA Mayotte",
+            'description' => $description,
             'form' => $form->createView(),
             'comment' => $comment
         ]);
