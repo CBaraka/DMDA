@@ -11,7 +11,7 @@
 					<div class="description">
 						{% for DescAsso in description %}
 							<div class="titre">{{DescAsso.titre}}</div>
-							<div class="contenu">{{DescAsso.contenu}}</div>
+							<div class="contenu">{{DescAsso.contenu | raw}}</div>
 							<div class="image">
 								<img class="img" src="{{vich_uploader_asset(DescAsso,'imageFile')}}" style="width: 150px;">
 							</div>
@@ -27,12 +27,12 @@
 				<div class="col-sm-9">
 					<h2>Commentaires({{comment|length}})</h2>
 					<div class="comment">
-						{% for Commentaire in comment %}
+						{% for Comment in comment %}
 							<div class="pseudo">Publié par
-								{{Commentaire.pseudo}}
+								{{Comment.pseudo}}
 								le
-								{{Commentaire.createdAt | date('d/m/Y - H:i')}}</div>
-							<div class="contenu">{{Commentaire.contenu | raw}}</div>
+								{{Comment.createdAt | date('d/m/Y - H:i')}}</div>
+							<div class="contenu">{{Comment.contenu | raw}}</div>
 						{% else %}
 							<p>Il n'y a pas encore de commentaire, publiez le premier !</p>
 						{% endfor %}
