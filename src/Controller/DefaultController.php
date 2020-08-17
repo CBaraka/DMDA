@@ -3,7 +3,7 @@
 namespace App\Controller;
 
 use App\Entity\DescAsso;
-use App\Entity\Commentaire;
+use App\Entity\Comment;
 use App\Form\CommentaireType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
@@ -20,10 +20,10 @@ class DefaultController extends AbstractController
      *@return Response
      */
     public function index(Request $request): Response
-    {
+    {   
+        $commentaire = new Comment();
         $description = $this->getDoctrine()->getRepository(DescAsso::class)->findAll();
-        $comment = $this->getDoctrine()->getRepository(Commentaire::class)->findAll();
-        $commentaire = new Commentaire();
+        $comment = $this->getDoctrine()->getRepository(Comment::class)->findAll();
         $form = $this->createForm(CommentaireType::class, $commentaire);
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
