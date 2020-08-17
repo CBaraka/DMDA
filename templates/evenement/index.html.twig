@@ -3,5 +3,31 @@
 	{{pagetitle}}
 {% endblock %}
 {% block body %}
-<h1 >Évenements</h1>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-9">
+				<h1>Évenements</h1>
+				<div class="description">
+					{% for Evenements in evenement %}
+						<div class="titre">
+							<h5>l'association D.M.D.A Mayotte organise
+								{{Evenements.titre}}
+								!</h5>
+						</div>
+						<div class="contenu">
+							{{Evenements.contenu | raw}}
+							<p>le
+								{{Evenements.date | date('d/m/Y - H:i')}}</p>
+							<p>Pour plus de renseignement a cette evenement contactez le
+								{{Evenements.telephone}}
+								du lundi au vendredi de 9h30 à 17h00</p>
+						</div>
+						<div class="image">
+							<img class="img" src="{{vich_uploader_asset(Evenements,'imageFile')}}" style="width: 150px;">
+						</div>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+	</div>
 {% endblock %}
