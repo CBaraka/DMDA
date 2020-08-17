@@ -3,9 +3,11 @@
 namespace App\Controller\Admin;
 
 use App\Entity\DescAsso;
+use DateTime;
 //use EasyCorp\Bundle\EasyAdminBundle\Field\IdField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
+use EasyCorp\Bundle\EasyAdminBundle\Field\DateTimeField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\ImageField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextEditorField;
 use Vich\UploaderBundle\Form\Type\VichImageType;
@@ -26,6 +28,7 @@ class DescAssoCrudController extends AbstractCrudController
             ImageField::new('imageFile')
             ->setFormType(VichImageType::class)
             ->setLabel('Image'),
+            DateTimeField::new('updated'),
         ];
     }
 }
