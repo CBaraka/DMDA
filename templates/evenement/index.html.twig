@@ -3,10 +3,13 @@
 	{{pagetitle}}
 {% endblock %}
 {% block body %}
+	<br/>
+	<br/>
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-9">
 				<h1>Évenements</h1>
+				<hr/>
 				<div class="description">
 					{% for Evenements in evenement %}
 						<div class="titre">
@@ -25,6 +28,8 @@
 						<div class="image">
 							<img class="img" src="{{vich_uploader_asset(Evenements,'imageFile')}}" style="width: 150px;">
 						</div>
+						<br/>
+						<br/>
 					{% endfor %}
 				</div>
 			</div>

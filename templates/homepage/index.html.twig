@@ -3,11 +3,14 @@
 	{{pagetitle}}
 {% endblock %}
 {% block body %}
+	<br/>
+	<br/>
 	<section>
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-9">
 					<h2>Description de l'association</h2>
+					<hr/>
 					<div class="description">
 						{% for DescAsso in description %}
 							<div class="titre">{{DescAsso.titre}}</div>
@@ -23,15 +26,19 @@
 
 				</div>
 			</div>
+			<br/>
+			<br/>
 			<div class="row">
 				<div class="col-sm-9">
 					<h2>Évenements</h2>
-					<div class="description">
+					<hr/>
+					<div class="evenement">
 						{% for Evenements in evenement %}
 							<div class="titre">
 								<h5>l'association D.M.D.A Mayotte organise
-								{{Evenements.titre}}
-								!</h5></div>
+									{{Evenements.titre}}
+									!</h5>
+							</div>
 							<div class="contenu">
 								{{Evenements.contenu | raw}}
 								<p>le
@@ -44,11 +51,16 @@
 								<img class="img" src="{{vich_uploader_asset(Evenements,'imageFile')}}" style="width: 150px;">
 							</div>
 						{% endfor %}
+						<br/>
+						<br/>
 					</div>
 				</div>
+				<br/>
+				<br/>
 				<div class="row">
 					<div class="col-sm-9">
 						<h2>Commentaires({{comment|length}})</h2>
+						<hr/>
 						<div class="comment">
 							{% for Comment in comment %}
 								<div class="pseudo">Publié par
@@ -60,7 +72,10 @@
 								<p>Il n'y a pas encore de commentaire, publiez le premier !</p>
 							{% endfor %}
 						</div>
+						<br/>
+						<br/>
 						<h2>Laissez un commentaire</h2>
+
 						{{ form_start(form) }}
 
 						{{ form_errors(form) }}
@@ -104,6 +119,8 @@
 						</div>
 					</div>
 				</div>
+				<br/>
+				<br/>
 			</div>
 		</section>
 	{% endblock %}
