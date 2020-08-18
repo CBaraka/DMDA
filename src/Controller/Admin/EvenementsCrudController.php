@@ -31,7 +31,7 @@ class EvenementsCrudController extends AbstractCrudController
             DateField::new('date'),
             ImageField::new('imageFile')
             ->setFormType(VichImageType::class)
-            ->setLabel('Image'),
+            ->setLabel('image'),
             DateTimeField::new('date'),
         ];
     }

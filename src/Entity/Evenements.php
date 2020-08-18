@@ -98,13 +98,11 @@ class Evenements
         return $this->imageFile;
     }
 
-    public function setImageFile(?File $imageFile = null)
+    public function setImageFile(?File $imageFile)
     {
         $this->imageFile = $imageFile;
-
-        if (null != $imageFile) {
-            $this->updated = new \DateTime();
-        }
+        
+        return $this;
     }
 
     /**
