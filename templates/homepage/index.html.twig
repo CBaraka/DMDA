@@ -18,16 +18,15 @@
 							<div class="image">
 								<img class="img" src="{{vich_uploader_asset(DescAsso,'imageFile')}}" style="width: 150px;">
 							</div>
+							<br/>
+							<br/>
 						{% endfor %}
 					</div>
 					{% for message in app.flashes('success') %}
 						<div class="alert alert-success" role="alert">{{  message}}</div>
 					{% endfor %}
-
 				</div>
 			</div>
-			<br/>
-			<br/>
 			<div class="row">
 				<div class="col-sm-9">
 					<h2>Évenements</h2>
@@ -50,13 +49,12 @@
 							<div class="image">
 								<img class="img" src="{{vich_uploader_asset(Evenements,'imageFile')}}" style="width: 150px;">
 							</div>
+							<br/>
+							<br/>
 						{% endfor %}
-						<br/>
-						<br/>
 					</div>
 				</div>
-				<br/>
-				<br/>
+
 				<div class="row">
 					<div class="col-sm-9">
 						<h2>Commentaires({{comment|length}})</h2>
@@ -68,6 +66,7 @@
 									le
 									{{Comment.createdAt | date('d/m/Y - H:i')}}</div>
 								<div class="contenu">{{Comment.contenu | raw}}</div>
+								<br/>
 							{% else %}
 								<p>Il n'y a pas encore de commentaire, publiez le premier !</p>
 							{% endfor %}
