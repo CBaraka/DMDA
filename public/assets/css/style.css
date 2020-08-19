@@ -1,88 +1,97 @@
-html{
-    font-size: 16px;
+html {
+  font-size: 16px;
 }
 
-.title{
-    font-size: 20px;
+.title {
+  font-size: 20px;
 }
-html, body {
-    margin:0;
-    padding:0;
+html,
+body {
+  margin: 0;
+  padding: 0;
 }
 body > header {
-    display: grid;
-    align-items: center;
-    grid-template-columns: 20% 60% 20%;
-    padding: 1rem;
-    background-color: #FFC97A;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 20% 60% 20%;
+  padding: 1rem;
+  background-color: #ffc97a;
 }
 
-body > header .logo{
-    flex: 1;
-    height: 5rem;
+body > header .logo {
+  flex: 1;
+  height: 5rem;
 }
-body > header h1{
-    flex:1;
-    text-align: center;
+body > header h1 {
+  flex: 1;
+  text-align: center;
 }
 body > header > nav {
-    flex:1;
+  flex: 1;
 }
-body > header > nav ul{
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    list-style: none;
+body > header > nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  list-style: none;
 }
 
-body > header > nav ul li a{
-    padding: 0.5rem 1rem;
+body > header > nav ul li a {
+  padding: 0.5rem 1rem;
 }
-body > section{
-    padding:1rem;
+body > header > nav ul li a:hover {
+  color: #ffffff;
 }
-body > footer{
-    background-color: #4A5899;
-    text-decoration-color: #ffffff;
-    max-height: 10 px;
-    color:#ffffff;
-    margin-bottom: 0;
-    position: absolute;
-    width:100%;
+body > section {
+  padding: 1rem;
+}
+body > footer {
+  background-color: #4a5899;
+  text-decoration-color: #ffffff;
+  max-height: 10 px;
+  color: #ffffff;
+  margin-bottom: 0;
+  position: absolute;
+  width: 100%;
 }
 body > footer .copyrights {
-    font-size: 0.8rem;
-    text-align: center;
+  font-size: 0.8rem;
+  text-align: center;
 }
-body > footer .logo{
-    flex: 1;
-    height: 5rem;
-    color:#ffffff;
+body > footer .logo {
+  flex: 1;
+  height: 5rem;
+  color: #ffffff;
+}
 
+body > footer .col a {
+  padding: 0.5rem 1rem;
+  color: #ffffff;
 }
-
-body > footer .col a{
-    padding: 0.5rem 1rem;
-    color:#ffffff;
-   
+body > footer > .copyrights a {
+  color: #ffffff;
 }
-body > footer > .copyrights a{
-    color:#ffffff;
-   
-}
- hr{
-background-color:#FFC97A;
+hr {
+  background-color: #ffc97a;
 }
 label.required::after {
-    content: "*";
-    color:red;
+  content: "*";
+  color: red;
 }
-#mapid{
-    height: 50vh;
-    width: 50vh;
-    margin-top: 10px;
+#mapid {
+  height: 50vh;
+  width: 50vh;
+  margin-top: 10px;
 }
-body > footer .col p .logo{
-    flex: 1;
-    height: 5rem;
+body > footer .col p .logo {
+  flex: 1;
+  height: 5rem;
+}
+
+#menu{  width:350px; }
+@media (min-width: 500px) { 
+#menu{  width:450px; } 
+}
+@media (min-width: 1000px) { 
+#menu{  width:800px; } 
 }

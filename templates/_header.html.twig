@@ -1,18 +1,37 @@
-<header>
-    <a href="{{ path('homepage') }}">
-        <img src="{{ asset('assets/img/logo.png') }}" class="logo" alt="logo association" />
-    </a>
+<header class="menu">
+	<nav class="navbar navbar-expand-xl|sm">
 
-    <h1 class="title">Association DMDA Mayotte</h1>
 
-    <nav>
-        <ul>
-            <li><a href="{{ path('homepage') }}">Accueil</a></li>
-            <li><a href="{{ path('adhesion_particuliers') }}">Adhésion</a></li>
-            <li><a href="{{ path('evenement') }}">Évenements</a></li>
-            <li><a href="{{ path('don') }}">Donation</a></li>
-             <li><a href="{{ path('contact') }}">Contact</a></li>
-             <li><a href="{{ path('membres') }}">Membres</a></li>
-        </ul>
-    </nav>
+		<a href="{{ path('homepage') }}">
+			<img src="{{ asset('assets/img/logo.png') }}" class="logo" alt="logo association"/>
+		</a>
+		<h1 class="title">Association DMDA Mayotte</h1>
+		<a class="navbar-brand" href="#">Navbar</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item active">
+					<a class="nav-link" href="{{ path('homepage') }}">Accueil</a>
+				</li>
+				<li class="navbar-item">
+					<a class="nav-link" href="{{ path('adhesion_particuliers') }}">Adhésion</a>
+				</li>
+				<li class="navbar-item">
+					<a class="nav-link" href="{{ path('evenement') }}">Évenements</a>
+				</li>
+				<li class="navbar-item">
+					<a class="nav-link" href="{{ path('don') }}">Donation</a>
+				</li>
+				<li class="navbar-item">
+					<a class="nav-link" href="{{ path('contact') }}">Contact</a>
+				</li>
+				<li class="navbar-item">
+					<a class="nav-link" href="{{ path('membres') }}">Membres</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+
 </header>
