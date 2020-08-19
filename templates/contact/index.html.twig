@@ -3,7 +3,10 @@
 	{{pagetitle}}
 {% endblock %}
 {% block body %}
+	<br/>
+	<br/>
 	<h3>Contactez-nous</h3>
+	<hr/>
 
 	<div class="container">
 		<div class="row">
@@ -46,7 +49,7 @@
 				<div
 					class="form-group">
 					{# Génération du label. #}
-					{{ form_label(form.Prenom, "Prenom", {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
+					{{ form_label(form.Prenom, "Prénom", {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
 
 					{# Affichage des erreurs pour ce champ précis. #}
 					{{ form_errors(form.Prenom) }}
@@ -78,7 +81,7 @@
 				<div
 					class="form-group">
 					{# Génération du label. #}
-					{{ form_label(form.Telephone, "Telephone", {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
+					{{ form_label(form.Telephone, "Téléphone", {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
 
 					{# Affichage des erreurs pour ce champ précis. #}
 					{{ form_errors(form.Telephone) }}

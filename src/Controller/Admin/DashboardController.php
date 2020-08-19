@@ -6,9 +6,11 @@ use App\Entity\AdhesionParticuliers;
 use App\Entity\Contact;
 use App\Entity\DescAsso;
 use App\Entity\User;
+use App\Entity\Evenements;
 use App\Repository\UserRepository;
 use App\Repository\AdhesionParticuliersRepository;
 use App\Repository\DescAssoRepository;
+use App\Repository\EvenementsRepository;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Assets;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Dashboard;
 use EasyCorp\Bundle\EasyAdminBundle\Config\MenuItem;
@@ -31,20 +33,27 @@ class DashboardController extends AbstractDashboardController
      */
     protected $userRepository;
 
-     /**
+    /**
      * @var AdhesionParticuliersRepository
      */
     protected $particulierRepository;
+
+    /**
+     * @var EvenementsRepository
+     */
+    protected $evenementsRepository;
 
 
     public function __construct(
         DescAssoRepository $descAssocRepository,
         UserRepository $userRepository,
-        AdhesionParticuliersRepository $particulierRepository
+        AdhesionParticuliersRepository $particulierRepository,
+        EvenementsRepository $evenementsRepository
     ) {
         $this->descAssocRepository = $descAssocRepository;
         $this->userRepository = $userRepository;
         $this->particulierRepository = $particulierRepository;
+        $this->evenementsRepository = $evenementsRepository;
     }
 
 
@@ -72,8 +81,8 @@ class DashboardController extends AbstractDashboardController
     {
         yield MenuItem::linktoDashboard('Dashboard', 'fa fa-home');
         yield MenuItem::linkToCrud('Description', 'fa fa-pencil-square-o', DescAsso::class);
+        yield MenuItem::linkToCrud('Evenements', 'fa fa-check-square-o', Evenements::class);
         yield MenuItem::linkToCrud('Adhesion', 'fa fa-check-square-o', AdhesionParticuliers::class);
-        yield MenuItem::linkToCrud('Contact', 'fa fa-check-square-o', Contact::class);
         yield MenuItem::linkToCrud('Utilisateurs', 'fa fa-users', User::class);
         // yield MenuItem::linkToCrud('The Label', 'icon class', EntityClass::class);
     }
