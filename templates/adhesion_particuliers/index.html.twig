@@ -5,7 +5,7 @@
 {% block body %}
 	<br/>
 	<br/>
-	<h3>Formulaire d'adhésion particuliers</h3>
+	<h3>Formulaire d'adhésion</h3>
 	<hr/>
 
 	<div class="container">
@@ -52,7 +52,7 @@
 				<div
 					class="form-group">
 					{# Génération du label. #}
-					{{ form_label(form.Prenom, "Prenom", {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
+					{{ form_label(form.Prenom, "Prénom", {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
 
 					{# Affichage des erreurs pour ce champ précis. #}
 					{{ form_errors(form.Prenom) }}
