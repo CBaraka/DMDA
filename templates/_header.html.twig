@@ -1,18 +1,41 @@
 <header>
-    <a href="{{ path('homepage') }}">
-        <img src="{{ asset('assets/img/logo.png') }}" class="logo" alt="logo association" />
-    </a>
+	<nav>
 
-    <h1 class="title">Association DMDA Mayotte</h1>
-
-    <nav>
-        <ul>
-            <li><a href="{{ path('homepage') }}">Accueil</a></li>
-            <li><a href="{{ path('adhesion_particuliers') }}">Adhésion</a></li>
-            <li><a href="{{ path('evenement') }}">Évenements</a></li>
-            <li><a href="{{ path('don') }}">Donation</a></li>
-             <li><a href="{{ path('contact') }}">Contact</a></li>
-             <li><a href="{{ path('membres') }}">Membres</a></li>
-        </ul>
-    </nav>
+		<div class="logo-header">
+			<a href="{{ path('homepage') }}">
+				<img src="{{ asset('assets/img/logo.png') }}" class="logo" alt="logo association"/>
+			</a>
+		</div>
+		<div class="humb"> <i class="fas fa-bars"> </i></div>
+		<div class="titre">
+			<h1 class="title">Association DMDA Mayotte</h1>
+		</div>
+		<div class="menu">
+			<ul class="">
+				<li> <a href="{{ path('homepage') }}" class="link">Accueil</a> </li>
+				<li> <a href="{{ path('adhesion_particuliers') }}" class="link">Adhésion</a> </li>
+				<li> <a href="{{ path('evenement') }}" class="link">Évenements</a> </li>
+				<li> <a href="{{ path('don') }}" class="link">Donation</a> </li>
+				<li> <a href="{{ path('contact') }}" class="link">Contact</a> </li>
+				<li> <a href="{{ path('membres') }}" class="link">Membres</a> </li>
+			</ul>
+		</div>
+	</nav>
+	<div>
+		<script>
+			 $(document).ready(function() {
+            $(".humb").on("click", function() {
+                $("nav ul").toggleClass("menu");
+            });
+		});
+		
+		$(window).on("scroll", function() {
+            if ($(window).scrollTop()) {
+                $('nav').addClass('scroll');
+            } else {
+                $('nav').removeClass('scroll');
+            }
+        }) 
+		</script>
+		</div>
 </header>
