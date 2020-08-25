@@ -41,38 +41,6 @@ body > header > nav ul li a{
 body > section{
     padding:1rem;
 }
-body > footer{
-    background-color: #4A5899;
-    text-decoration-color: #ffffff;
-    max-height: 10 px;
-    color:#ffffff;
-    margin-bottom: 0;
-    position: absolute;
-    width:100%;
-}
-body > footer .copyrights {
-    font-size: 0.8rem;
-    text-align: center;
-}
-body > footer .logo{
-    flex: 1;
-    height: 5rem;
-    color:#ffffff;
-
-}
-
-body > footer .col a{
-    padding: 0.5rem 1rem;
-    color:#ffffff;
-   
-}
-body > footer > .copyrights a{
-    color:#ffffff;
-   
-}
- hr{
-background-color:#FFC97A;
-}
 label.required::after {
     content: "*";
     color:red;
@@ -81,8 +49,4 @@ label.required::after {
     height: 50vh;
     width: 50vh;
     margin-top: 10px;
-}
-body > footer .col p .logo{
-    flex: 1;
-    height: 5rem;
 }
