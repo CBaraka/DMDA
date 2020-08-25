@@ -1,0 +1,50 @@
+footer{
+    background-color: #4A5899;
+    text-decoration-color: #ffffff;
+    max-height: 10 px;
+    color:#ffffff;
+    margin-bottom: 0;
+    position: absolute;
+    width:100%;
+    padding-top: 40px;
+    margin-top: auto;
+} 
+.list a{
+    color: #ffffff;
+    text-decoration: none;
+}
+.list {
+    list-style: none
+  }
+ .copyrights {
+    font-size: 0.8rem;
+    text-align: center;
+}
+ .copyrights a{
+    color:#ffffff;
+  
+}
+ hr{
+background-color:#FFC97A;
+}
+.col li .logo{
+    flex: 1;
+    height: 3rem;
+}
+@media only screen and (max-width: 700px) {
+    .list {
+        width: 100%
+      }
+      .list li {
+        font-size: 1.5em
+      }
+      .list li a{
+        font-size: 1.5em
+      }
+      .copyrights a{
+        font-size: 1.5em
+      }
+      .col p {
+        font-size: 1.5em
+      }
+    }
