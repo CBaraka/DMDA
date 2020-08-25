@@ -16,16 +16,14 @@ h1 {
 .navbar-toggle {
   display: none;
 }
- .navbar-collapse{
-   background: royalblue;
-   padding: 0;
-   margin-bottom: 0;
-   display: flex;
-   flex-direction: row-reverse;
-   width: 42%;
-  
-  
- }
+.navbar-collapse {
+  background: royalblue;
+  padding: 0;
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: row-reverse;
+  width: 42%;
+}
 .navbar-collapse .navbar-nav {
   display: flex;
   align-items: center;
@@ -41,12 +39,10 @@ a {
   padding: 0.5rem 1rem;
 }
 .btn {
-
   border-color: #4a5899;
   text-align: center;
   width: 150px;
   margin-top: 20px;
-
 }
 @media (max-width: 990px) {
   .navbar-expand-lg .navbar-toggle {
@@ -54,68 +50,57 @@ a {
   }
   .btn {
     margin: 6px;
-    border-color: #4a5899;
     text-align: center;
     width: 130px;
   }
-  .logo_header{
-width: 30px;
-height: 30px;
-
-
+  .logo_header {
+    width: 30px;
+    height: 30px;
   }
-  .title{
+  .title {
     margin-left: 10px;
     padding-left: 10px;
     font-size: 10px;
   }
-  .lh{
+  .lh {
     margin-top: 0;
     margin-left: 0;
-    
   }
-  
-  .container-fluid{
-display: flex;
 
+  .container-fluid {
+    display: flex;
   }
-  
 }
 @media (min-width: 1398px) {
-  .navbar-collapse{
-    background-color: red;
+  .navbar-collapse {
     width: 30;
   }
- 
 }
 @media (max-width: 1398px) {
-.btn{
-  width: 90px;
-  font-size: 5px;
-  padding-left: 2px;
-  text-align: center;
+  .btn {
+    width: 90px;
+    font-size: 5px;
+    padding-left: 2px;
+    text-align: center;
+  }
+  a {
+    font-size: 10px;
+    text-align: center;
+  }
+  .title {
+    font-size: 15px;
+  }
 }
-a{
-  font-size: 10px;
-  text-align: center;
-}
-.title{
-  font-size: 15px;
-}
+@media (max-width: 1100px) {
+  .title {
+    font-size: 12px;
+  }
+  .btn {
+    width: 70px;
+  }
 
- }
- @media (max-width: 1100px) {
-.title{
-  font-size: 12px;
+  a {
+    text-align: center;
+    font-size: 10px;
+  }
 }
-.btn{
-  width: 70px;
-}
-
- 
- a{
-   text-align: center;
-   font-size: 10px;
- }
-
-    }
