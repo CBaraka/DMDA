@@ -9,7 +9,7 @@ body {
     padding:0;
 }
 .contenu{
-    text-align: justify;
+    text-justify: none;
 }
 body > footer{
     background-color: #4A5899;
