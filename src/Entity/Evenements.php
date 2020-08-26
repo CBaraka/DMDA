@@ -32,7 +32,7 @@ class Evenements
     private $contenu;
 
     /**
-     * @ORM\Column(type="string", length=255, nullable=true)
+     * @ORM\Column(type="string", length=255)
      */
     private $image;
 
@@ -48,7 +48,7 @@ class Evenements
     private $date;
 
     /**
-     * @ORM\Column(type="integer" , nullable=true)
+     * @ORM\Column(type="integer" )
      */
     private $telephone;
 
@@ -106,7 +106,7 @@ class Evenements
     }
 
     /**
-     * @return \DateTimeInterface|null
+     * @return \DateTimeInterface
      */
     public function getDate(): ?\DateTimeInterface
     {
@@ -114,7 +114,7 @@ class Evenements
     }
 
      /**
-     * @param \DateTimeInterface|null $date
+     * @param \DateTimeInterface $date
      * @return $this
      */
     public function setDate(\DateTimeInterface $date): self
