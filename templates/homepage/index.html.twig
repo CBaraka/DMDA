@@ -16,7 +16,7 @@
 							<div class="titre">{{DescAsso.titre}}</div>
 							<div class="contenu">{{DescAsso.contenu | raw}}</div>
 							<div class="image">
-								<img class="img" src="{{vich_uploader_asset(DescAsso,'imageFile')}}" style="width: 150px;">
+								<img class="img" src="{{vich_uploader_asset(DescAsso,'imageFile')}}" alt="image description" style="width: 150px;">
 							</div>
 							<br/>
 							<br/>
@@ -34,9 +34,9 @@
 					<div class="evenement">
 						{% for Evenements in evenement %}
 							<div class="titre">
-								<h5>l'association D.M.D.A Mayotte organise
+								<h4>l'association D.M.D.A Mayotte organise
 									{{Evenements.titre}}
-									!</h5>
+									!</h4>
 							</div>
 							<div class="contenu">
 								{{Evenements.contenu | raw}}
@@ -47,7 +47,7 @@
 									du lundi au vendredi de 9h30 à 17h00</p>
 							</div>
 							<div class="image">
-								<img class="img" src="{{vich_uploader_asset(Evenements,'imageFile')}}" style="width: 150px;">
+								<img class="img" src="{{vich_uploader_asset(Evenements,'imageFile')}}" alt="image de l'évènement" style="width: 150px;">
 							</div>
 							<br/>
 							<br/>
@@ -73,7 +73,7 @@
 						</div>
 						<br/>
 						<br/>
-						<h2>Laissez un commentaire</h2>
+						<h4>Laissez un commentaire</h4>
 
 						{{ form_start(form) }}
 
