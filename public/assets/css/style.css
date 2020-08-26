@@ -16,11 +16,6 @@ label.required::after {
     color:red;
 }
 #mapid{
-<<<<<<< HEAD
-    height: 50vh;
-    width: 50vh;
-    margin-top: 10px;
-=======
     height: 20vh;
     width: 20vh;
     margin-top: 20px;
@@ -28,5 +23,4 @@ label.required::after {
 body > footer .col p .logo{
     flex: 1;
     height: 5rem;
->>>>>>> presentation
 }
