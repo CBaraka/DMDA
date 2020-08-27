@@ -22,3 +22,18 @@ body > footer .col p .logo{
     flex: 1;
     height: 5rem;
 }
+@media (max-width: 400px) {
+    #mapid{
+        height: 20vh;
+        width:  20vh;
+
+    }
+}
+@media (max-width: 990px) {
+    #mapid{
+        height: 40vh;
+        width:  40vh;
+        margin-left: 10px;
+
+    }
+}
