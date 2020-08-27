@@ -78,7 +78,7 @@ a {
 @media (max-width: 1398px) {
   .btn {
     width: 90px;
-    font-size: 5px;
+    font-size: 16px;
     padding-left: 2px;
     text-align: center;
   }
